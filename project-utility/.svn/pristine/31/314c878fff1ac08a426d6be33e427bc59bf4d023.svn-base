@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd"
+>
+
+	<info organisation="cn.quickly.project" module="project-utility" />
+
+	<configurations>
+		<conf name="default" />
+		<conf name="embed" />
+		<conf name="lib" extends="embed" />
+		<conf name="compile" extends="lib" />
+		<conf name="test" visibility="private" />
+	</configurations>
+
+	<dependencies defaultconf="compile->default">
+
+		<dependency org="javaee" name="javaee-api" rev="5" />
+		<dependency org="javax.mail" name="mail" rev="1.4" />
+
+
+		<dependency org="org.bouncycastle" name="bcprov-jdk15on" rev="${version.bc}" />
+		<dependency org="org.bouncycastle" name="bctls-jdk15on" rev="${version.bc}" />
+
+		<dependency org="ognl" name="ognl" rev="${version.ognl}" />
+
+		<dependency org="cglib" name="cglib-nodep" rev="${version.cglib}" />
+
+		<dependency org="com.jcraft" name="jsch" rev="0.1.54" />
+
+		<dependency org="com.sleepycat" name="je" rev="${version.je}" />
+
+		<dependency org="junit" name="junit" rev="4.12" />
+
+		<dependency org="commons-net" name="commons-net" rev="3.6" />
+
+	</dependencies>
+
+</ivy-module>
+
